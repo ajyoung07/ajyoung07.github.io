@@ -1,0 +1,33 @@
+html {
+    /* background-color: black; */
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    display: flex;
+}
+
+nav button {
+    border: 0;
+    background-color: white;
+    padding: 1em;
+}
+
+nav button:hover {
+    background-color:darkslateblue;
+    color: white;
+}
+
+.view {
+    padding: 0 25%;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* h1 {
+    color: white;
+}*/
