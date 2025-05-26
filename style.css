@@ -28,6 +28,10 @@ nav button:hover {
     justify-content: space-between;
 }
 
+li{
+    padding: 0.25em;
+}
+
 /* h1 {
     color: white;
 }*/
