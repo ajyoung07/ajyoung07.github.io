@@ -28,8 +28,12 @@ nav button:hover {
     justify-content: space-between;
 }
 
-li{
+li {
     padding: 0.25em;
+}
+
+#toggle-dark-mode {
+    border-radius: 1em;
 }
 
 /* h1 {
