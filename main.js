@@ -1,4 +1,18 @@
-document.addEventListener("DOMContentLoaded", () =>{
+function toggleTheme() {
+    const icon_elem = document.getElementById("icon-name");
+    const body = document.querySelector("body");
+    // Toggling the icon
+    let txt = icon_elem.innerText;
+    txt = txt === "dark_mode" ? "light_mode" : "dark_mode";
+    icon_elem.innerText = txt;
+    // Changing CSS
+    body.classList.remove(txt === "dark_mode" ? "light_mode" : "dark_mode");
+    body.classList.add(txt);
+    localStorage.setItem("theme", txt);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("theme") === "dark_mode") toggleTheme();
 
     const [homeButton, aboutButton] = ["homeButton", "aboutButton"]
         .map(e => document.getElementById(e))
@@ -15,11 +29,5 @@ document.addEventListener("DOMContentLoaded", () =>{
     document.getElementById("github").addEventListener('click', () => window.open("https://github.com/ajyoung07", target="_blank"))
     document.getElementById("email").addEventListener('click', () => window.open('mailto:alberjyoung1@gmail.com', target='_blank'));
 
-    document.getElementById("toggle-dark-mode").addEventListener('click', () => {
-        const icon_elem = document.getElementById("icon-name");
-        let txt = icon_elem.innerText;
-        if (txt === "dark_mode") txt = "light_mode";
-        else txt = "dark_mode";
-        icon_elem.innerText = txt;
-    })
+    document.getElementById("toggle-dark-mode").addEventListener('click', toggleTheme)
 })
