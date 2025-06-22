@@ -1,21 +1,9 @@
 html {
-    /* background-color: black; */
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Consolas, 'Courier New', monospace;
 }
 
 nav {
     display: flex;
-}
-
-nav button {
-    border: 0;
-    background-color: white;
-    padding: 1em;
-}
-
-nav button:hover {
-    background-color:darkslateblue;
-    color: white;
 }
 
 .view {
@@ -28,8 +16,71 @@ nav button:hover {
     justify-content: space-between;
 }
 
-li{
+li {
     padding: 0.25em;
+}
+
+#toggle-dark-mode {
+    border-radius: 1em;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 16ch }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.prompt {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 0.15em solid currentColor;
+    white-space: nowrap;
+    width: 16ch;
+    animation: typing 2s steps(16), blink 1s step-end infinite;
+}
+
+.pronouns {
+    font-style: italic;
+    font-size: smaller;
+}
+
+.light_mode {
+    background-color: white;
+    color: black;
+}
+
+.light_mode nav button {
+    border: 0;
+    background-color: white;
+    padding: 1em;
+}
+
+.light_mode nav button:hover {
+    background-color:darkslateblue;
+    color: white;
+}
+
+.dark_mode {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+.dark_mode nav button {
+    border: 0;
+    background-color: #1f1f1f;
+    color: white;
+    padding: 1em;
+}
+
+.dark_mode nav button:hover {
+    background-color: darkorange;
+    color: black;
 }
 
 /* h1 {
