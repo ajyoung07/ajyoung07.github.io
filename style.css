@@ -83,6 +83,14 @@ li {
     color: black;
 }
 
+a:link {
+    color: lightskyblue;
+}
+
+a:visited {
+    color: blueviolet;
+}
+
 /* h1 {
     color: white;
 }*/
