@@ -83,12 +83,16 @@ li {
     color: black;
 }
 
-a:link {
+a {
     color: lightskyblue;
 }
 
 a:visited {
     color: blueviolet;
+}
+
+a:hover {
+    color: turquoise;
 }
 
 /* h1 {
