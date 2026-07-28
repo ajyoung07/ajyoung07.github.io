@@ -1,4 +1,4 @@
-html {
+* {
     font-family: Consolas, 'Courier New', monospace;
 }
 
@@ -95,6 +95,25 @@ a:hover {
     color: turquoise;
 }
 
-/* h1 {
-    color: white;
-}*/
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 0.1rem;
+}
+
+.skills-list i {
+    font-size: 1.2rem;
+}
